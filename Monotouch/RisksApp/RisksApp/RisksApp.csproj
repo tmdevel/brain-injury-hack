@@ -109,10 +109,38 @@
     <Compile Include="DirectoryViewController.designer.cs">
       <DependentUpon>DirectoryViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeViewController.cs" />
+    <Compile Include="HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DDViewController.cs" />
+    <Compile Include="DDViewController.designer.cs">
+      <DependentUpon>DDViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SymptomsViewController.cs" />
+    <Compile Include="SymptomsViewController.designer.cs">
+      <DependentUpon>SymptomsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeekMedicalViewController.cs" />
+    <Compile Include="SeekMedicalViewController.designer.cs">
+      <DependentUpon>SeekMedicalViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupportViewController.cs" />
+    <Compile Include="SupportViewController.designer.cs">
+      <DependentUpon>SupportViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="RisksAppViewController.xib" />
     <InterfaceDefinition Include="DirectoryViewController.xib" />
+    <InterfaceDefinition Include="HomeViewController.xib" />
+    <InterfaceDefinition Include="DDViewController.xib" />
+    <InterfaceDefinition Include="SymptomsViewController.xib" />
+    <InterfaceDefinition Include="SeekMedicalViewController.xib" />
+    <InterfaceDefinition Include="SupportViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="Images\SeekMedical.png" />
+  </ItemGroup>
 </Project>
