@@ -6,11 +6,9 @@ using System.Collections.Generic;
 
 namespace RisksApp
 {
-	public partial class RisksAppViewController : UIPageViewController
+	public partial class RisksAppViewController : UIViewController
 	{
-        public RisksAppViewController () : base ( 
-            UIPageViewControllerTransitionStyle.Scroll,
-            UIPageViewControllerNavigationOrientation.Horizontal)
+        public RisksAppViewController () : base ()
 		{
 		}
 
@@ -25,13 +23,28 @@ namespace RisksApp
 		public override void ViewDidLoad () {
 			base.ViewDidLoad ();
 
-			// Perform any additional setup after loading the view, typically from a nib.
+
+			var pagingViewController = new UIPageViewController(
+				UIPageViewControllerTransitionStyle.Scroll,
+				UIPageViewControllerNavigationOrientation.Horizontal,
+				UIPageViewControllerSpineLocation.Min);	
+			pagingViewController.View.Frame = new RectangleF(0, 0, View.Bounds.Width, 568);
+
+
 			var pageDataSource = new NavigationPageDataSource ();
-			DataSource = pageDataSource;
-			SetViewControllers (new UIViewController[] { pageDataSource.controllers [0] }, UIPageViewControllerNavigationDirection.Forward, true, (e) => {});
+			pagingViewController.DataSource = pageDataSource;
+			pagingViewController.SetViewControllers (new UIViewController[] { pageDataSource.controllers [0] }, UIPageViewControllerNavigationDirection.Forward, true, (e) => {});
 
-			//UIPageViewControllerTransitionStyle = UIPageViewControllerTransitionStyle.Scroll;
+			AddChildViewController (pagingViewController);
+			pagingViewController.DidMoveToParentViewController(this);
+			View.AddSubview(pagingViewController.View);
 
+			UIPageControl pageDots = new UIPageControl (new RectangleF(10, 568 - 30, 320, 20));
+
+			pageDots.Pages = 5;
+			pageDots.CurrentPage = 0;
+			View.AddSubview (pageDots);
+			View.BringSubviewToFront (pageDots);
 
 		}
 

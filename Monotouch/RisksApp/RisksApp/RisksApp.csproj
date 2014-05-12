@@ -102,11 +102,11 @@
     <BundleResource Include="Images\doanddont%402x.png" />
     <BundleResource Include="Resources\Icon.png" />
     <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Images\SeekMedical%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="Images\SeekMedical.%402xpng" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />

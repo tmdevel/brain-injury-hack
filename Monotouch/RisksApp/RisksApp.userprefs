@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Testing iPhone5" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RisksApp/RisksApp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RisksApp/RisksAppViewController.cs">
     <Files>
       <File FileName="RisksApp/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="RisksApp/RisksAppViewController.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/RisksAppViewController.cs" Line="42" Column="75" />
       <File FileName="RisksApp/RisksAppViewController.designer.cs" Line="1" Column="1" />
       <File FileName="RisksApp/DirectoryViewController.cs" Line="1" Column="1" />
       <File FileName="RisksApp/HomeViewController.cs" Line="1" Column="1" />
