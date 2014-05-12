@@ -1,2 +1,9 @@
+[Bb]in/
+[Oo]bj/
 
-*.exe
+*.suo
+*.user
+_ReSharper.*
+
+bin
+obj
