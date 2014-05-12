@@ -6,6 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="InfoView" destination="7zk-Db-9e7" id="TKI-Bw-FBf"/>
+                <outlet property="InformLabel" destination="qXR-HU-xOJ" id="IUt-hG-Wqi"/>
+                <outlet property="KnowLabel" destination="gXW-uN-jsk" id="FQp-Qn-eAn"/>
+                <outlet property="RestLabel" destination="POb-dD-Ifk" id="8Cz-wU-NJM"/>
+                <outlet property="SeekLabel" destination="lno-sF-iWu" id="9uk-k4-Mbz"/>
+                <outlet property="SignsLabel" destination="Fj9-Gv-g3S" id="6MQ-FS-7PN"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -19,11 +25,11 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" id="7zk-Db-9e7">
-                    <rect key="frame" x="10" y="390" width="320" height="150"/>
+                    <rect key="frame" x="0.0" y="380" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="POb-dD-Ifk">
-                            <rect key="frame" x="0.0" y="0.0" width="48" height="22"/>
+                            <rect key="frame" x="20" y="0.0" width="48" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vef-qr-eQc">
@@ -44,7 +50,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="qXR-HU-xOJ">
-                            <rect key="frame" x="0.0" y="30" width="212" height="22"/>
+                            <rect key="frame" x="20" y="30" width="212" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UUR-hM-mwH">
@@ -65,7 +71,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="Fj9-Gv-g3S">
-                            <rect key="frame" x="0.0" y="60" width="155" height="22"/>
+                            <rect key="frame" x="20" y="60" width="155" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eW1-dd-DWu">
@@ -87,7 +93,7 @@
                             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                         </view>
                         <view contentMode="scaleToFill" id="gXW-uN-jsk">
-                            <rect key="frame" x="0.0" y="90" width="190" height="22"/>
+                            <rect key="frame" x="20" y="90" width="190" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R4Z-Cp-OZR">
@@ -108,7 +114,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" id="lno-sF-iWu">
-                            <rect key="frame" x="0.0" y="120" width="175" height="22"/>
+                            <rect key="frame" x="20" y="120" width="175" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cAM-uL-txk">
