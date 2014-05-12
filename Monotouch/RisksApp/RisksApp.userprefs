@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="RisksApp/RisksAppViewController.cs">
     <Files>
       <File FileName="RisksApp/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="RisksApp/RisksAppViewController.cs" Line="45" Column="6" />
+      <File FileName="RisksApp/RisksAppViewController.cs" Line="108" Column="4" />
       <File FileName="RisksApp/RisksAppViewController.designer.cs" Line="1" Column="1" />
       <File FileName="RisksApp/DirectoryViewController.cs" Line="1" Column="1" />
       <File FileName="RisksApp/HomeViewController.cs" Line="1" Column="1" />
@@ -18,7 +18,11 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="RisksApp/RisksAppViewController.cs" line="68" offsetX="383" offsetY="1005" expression="pageIndex" liveUpdate="False" />
+    <Watch file="RisksApp/RisksAppViewController.cs" line="108" offsetX="332" offsetY="1605" expression="index" liveUpdate="False" />
+    <Watch file="RisksApp/RisksAppViewController.cs" line="102" offsetX="332" offsetY="1515" expression="index" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.RisksApp>
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="P8Q89DH24N" TeamId="AR3QH6DB3R" />
   </MonoDevelop.Ide.ItemProperties.RisksApp>

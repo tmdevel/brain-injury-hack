@@ -33,10 +33,14 @@ namespace RisksApp
 				UIPageViewControllerSpineLocation.Min);	
 			pagingViewController.View.Frame = new RectangleF(0, 0, View.Bounds.Width, 568);
 
-
 			var pageDataSource = new NavigationPageDataSource ();
 			pagingViewController.DataSource = pageDataSource;
 			pagingViewController.SetViewControllers (new UIViewController[] { pageDataSource.controllers [0] }, UIPageViewControllerNavigationDirection.Forward, true, (e) => {});
+			pageDataSource.PageChanged += OnPageChanged;
+			pagingViewController.DidFinishAnimating += (object sender, UIPageViewFinishedAnimationEventArgs e) =>  {
+
+			};
+
 
 			AddChildViewController (pagingViewController);
 			pagingViewController.DidMoveToParentViewController(this);
@@ -46,6 +50,7 @@ namespace RisksApp
 
 			pageDots.Pages = 5;
 			pageDots.CurrentPage = 0;
+	
 
 			UIToolbar toolBar = new UIToolbar (new RectangleF (0, 568 - 37, 320, 37));
 			toolBar.Translucent = false;
@@ -60,7 +65,10 @@ namespace RisksApp
 			toolBar.SetItems ( new UIBarButtonItem[] { directoryButton }, true);
 
 			View.AddSubview (toolBar);
+		}
 
+		void OnPageChanged (int pageIndex) {
+			pageDots.CurrentPage = pageIndex;
 		}
 
 		partial void ShowDirectory () {
@@ -72,6 +80,7 @@ namespace RisksApp
 
 	public class NavigationPageDataSource : UIPageViewControllerDataSource {
 		public List<UIViewController> controllers;
+		public event Action<int> PageChanged;
 
 		public NavigationPageDataSource() {
 			controllers = new List<UIViewController> ();
@@ -93,15 +102,28 @@ namespace RisksApp
 
 		public override UIViewController GetNextViewController (UIPageViewController pageViewController, UIViewController referenceViewController) {
 			int index = controllers.IndexOf (referenceViewController);
-			return index == 4 ? controllers [0] : controllers [index + 1];
+			OnPageChanged (index);
 
+			index = index == 4 ? 0 : index + 1;
+
+			return controllers[index];
 		}
 			
 		public override UIViewController GetPreviousViewController (UIPageViewController pageViewController, UIViewController referenceViewController) {
 			int index = controllers.IndexOf (referenceViewController);
-			return index == 0 ? controllers [controllers.Count - 1] : controllers [index - 1];
+			OnPageChanged (index);
+
+			if (index == 0) 
+				return controllers[4];
+			return controllers[index-1];
 		}
 
+
+		private void OnPageChanged(int pageIndex) {
+			var invoker = PageChanged;
+			if (invoker != null)
+				invoker (pageIndex);
+		}
 	}
 }
 
