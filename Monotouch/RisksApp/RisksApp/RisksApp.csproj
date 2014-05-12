@@ -103,6 +103,8 @@
     <BundleResource Include="Resources\Icon.png" />
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Images\SeekMedical%402x.png" />
+    <BundleResource Include="Images\directory.png" />
+    <BundleResource Include="Images\directory%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

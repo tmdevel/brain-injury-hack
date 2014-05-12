@@ -8,6 +8,9 @@ namespace RisksApp
 {
 	public partial class RisksAppViewController : UIViewController
 	{
+		private UIBarButtonItem directoryButton;
+		private UIPageControl pageDots;
+
         public RisksAppViewController () : base ()
 		{
 		}
@@ -39,12 +42,24 @@ namespace RisksApp
 			pagingViewController.DidMoveToParentViewController(this);
 			View.AddSubview(pagingViewController.View);
 
-			UIPageControl pageDots = new UIPageControl (new RectangleF(10, 568 - 30, 320, 20));
+		    pageDots = new UIPageControl (new RectangleF(10, 0, 320, 20));
 
 			pageDots.Pages = 5;
 			pageDots.CurrentPage = 0;
-			View.AddSubview (pageDots);
-			View.BringSubviewToFront (pageDots);
+
+			UIToolbar toolBar = new UIToolbar (new RectangleF (0, 568 - 37, 320, 37));
+			toolBar.Translucent = false;
+			toolBar.BarTintColor = UIColor.FromRGB (227, 6, 19 );
+			toolBar.BackgroundColor = UIColor.FromRGB (227, 6, 19 );
+
+			toolBar.AddSubview (pageDots);
+			toolBar.BringSubviewToFront (pageDots);
+
+			directoryButton = new UIBarButtonItem (UIImage.FromBundle ("Images/directory"), UIBarButtonItemStyle.Plain, (s,e) => ShowDirectory ());
+
+			toolBar.SetItems ( new UIBarButtonItem[] { directoryButton }, true);
+
+			View.AddSubview (toolBar);
 
 		}
 
