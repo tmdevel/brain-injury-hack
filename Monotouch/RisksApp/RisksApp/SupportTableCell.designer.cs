@@ -16,6 +16,9 @@ namespace RisksApp
 		MonoTouch.UIKit.UIView ContentColourView { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UILabel ContentIndexLabel { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UILabel DescriptionLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
@@ -28,6 +31,11 @@ namespace RisksApp
 			if (DescriptionLabel != null) {
 				DescriptionLabel.Dispose ();
 				DescriptionLabel = null;
+			}
+
+			if (ContentIndexLabel != null) {
+				ContentIndexLabel.Dispose ();
+				ContentIndexLabel = null;
 			}
 		}
 	}

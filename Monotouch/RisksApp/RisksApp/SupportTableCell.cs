@@ -25,7 +25,8 @@ namespace RisksApp
 			return (SupportTableCell)Nib.Instantiate (null, null) [0];
 		}
 
-		public void Bind(UIColor colour, String desc) {
+		public void Bind(int index, UIColor colour, String desc) {
+			ContentIndexLabel.Text = index.ToString ();
 			ContentColourView.BackgroundColor = colour;
 			DescriptionLabel.Lines = 0;
 			DescriptionLabel.Text = desc;

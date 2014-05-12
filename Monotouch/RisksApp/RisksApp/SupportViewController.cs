@@ -25,7 +25,7 @@ namespace RisksApp
 		{
 			base.ViewDidLoad ();
 
-			this.Title = "Leaflets";
+			this.Title = "Support";
 
 			// Perform any additional setup after loading the view, typically from a nib.
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
@@ -82,13 +82,13 @@ namespace RisksApp
 					cell = MonoTouch.ObjCRuntime.Runtime.GetNSObject( views.ValueAt(0) ) as SupportTableCell;
 				}
 
-				cell.Bind (colours[indexPath.Row], tableItems[indexPath.Row]);
+				cell.Bind (indexPath.Row + 1, colours[indexPath.Row], tableItems[indexPath.Row]);
 				return cell;
 			}
 
 			public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
 			{
-				return 60;
+				return 58;
 			}
 
 			public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
