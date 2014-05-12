@@ -11,3 +11,5 @@ obj
 *.userprefs
 
 Monotouch/RisksApp/RisksApp.userprefs
+
+*.userprefs

@@ -8,7 +8,9 @@ namespace RisksApp
 {
 	public partial class RisksAppViewController : UIPageViewController
 	{
-		public RisksAppViewController () : base ("RisksAppViewController", null)
+        public RisksAppViewController () : base ( 
+            UIPageViewControllerTransitionStyle.Scroll,
+            UIPageViewControllerNavigationOrientation.Horizontal)
 		{
 		}
 
