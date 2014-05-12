@@ -89,7 +89,7 @@ namespace RisksApp
 			controllers.Add (new DDViewController ());
 			controllers.Add (new SymptomsViewController ());
 			controllers.Add (new SeekMedicalViewController ());
-			controllers.Add (new SupportViewController ());
+			controllers.Add (new UINavigationController(new SupportViewController ()));
 		} 
 
 		public override int GetPresentationCount (UIPageViewController pageViewController) {

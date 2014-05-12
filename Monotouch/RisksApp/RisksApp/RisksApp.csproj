@@ -97,7 +97,6 @@
     <Reference Include="monotouch" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Images\symptoms%402x.png" />
     <BundleResource Include="Images\doanddont%402x.png" />
     <BundleResource Include="Resources\Icon.png" />
@@ -105,6 +104,8 @@
     <BundleResource Include="Images\SeekMedical%402x.png" />
     <BundleResource Include="Images\directory.png" />
     <BundleResource Include="Images\directory%402x.png" />
+    <BundleResource Include="Resources\XXXXDefault-568h%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -137,13 +138,17 @@
     <Compile Include="SeekMedicalViewController.designer.cs">
       <DependentUpon>SeekMedicalViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="SupportViewController.cs" />
-    <Compile Include="SupportViewController.designer.cs">
-      <DependentUpon>SupportViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="SupportTableCell.cs" />
     <Compile Include="SupportTableCell.designer.cs">
       <DependentUpon>SupportTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentViewer.designer.cs">
+      <DependentUpon>DocumentViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentViewer.cs" />
+    <Compile Include="SupportViewController.cs" />
+    <Compile Include="SupportViewController.designer.cs">
+      <DependentUpon>SupportViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +160,23 @@
     <InterfaceDefinition Include="SeekMedicalViewController.xib" />
     <InterfaceDefinition Include="SupportViewController.xib" />
     <InterfaceDefinition Include="SupportTableCell.xib" />
+    <InterfaceDefinition Include="DocumentViewer.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Content Include="Images\home%402x.png" />
+    <Content Include="Documents\Information Leaflet on Brain Injury.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Arrival at Hospital and Early Treatment.pdf" />
+    <Content Include="Documents\Acquired Brain Injury in Children and Young People.pdf" />
+    <Content Include="Documents\Discharge and Leaving Hospital.pdf" />
+    <Content Include="Documents\Recovery and Early Rehabilitation.pdf" />
+    <Content Include="Documents\Rehabilitation.pdf" />
+    <Content Include="Documents\Family Dynamics and Caring Responsibility.pdf" />
+    <Content Include="Documents\Support Services Available.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documents\" />
   </ItemGroup>
 </Project>

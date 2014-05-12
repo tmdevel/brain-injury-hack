@@ -25,20 +25,24 @@ namespace RisksApp
 		{
 			base.ViewDidLoad ();
 
+            this.Title = "Support";
+
 			// Perform any additional setup after loading the view, typically from a nib.
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
-			TableView.Source = new TableSource ();
+			TableView.Source = new TableSource (this);
 		}
 
 		public class TableSource : UITableViewSource {
+			private UIViewController viewController;
+
 			string[] tableItems = new string[] {
-				"Information on Brain Injury", 
-				"Arrival at Hospital",
-				"Leaving Hospital",
-				"Recovery and Early Rehab",
+				"Information Leaflet on Brain Injury", 
+				"Arrival at Hospital and Early Treatment",
+				"Discharge and Leaving Hospital",
+				"Recovery and Early Rehabilitation",
 				"Rehabilitation",
-				"Injury in Children and Young People",
-				"Family Dynamics and Caring Responsibilities",
+				"Acquired Brain Injury in Children and Young People",
+				"Family Dynamics and Caring Responsibility",
 				"Support Services Available" };
 
 			UIColor[] colours = new UIColor[] {
@@ -51,6 +55,11 @@ namespace RisksApp
 				UIColor.FromRGB(116, 63, 104),
 				UIColor.FromRGB(98, 174, 52)
 			};
+
+			public TableSource (UIViewController viewController)
+			{
+				this.viewController = viewController;
+			}
 
 			public override int RowsInSection (UITableView tableview, int section)
 			{
@@ -80,6 +89,13 @@ namespace RisksApp
 			public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
 			{
 				return 60;
+			}
+
+			public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
+			{
+				DocumentViewer documentViewer = new DocumentViewer (tableItems [indexPath.Row]);
+				viewController.NavigationController.PushViewController (documentViewer, true);
+				tableView.DeselectRow (indexPath, true);
 			}
 		}
 	}
