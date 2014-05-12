@@ -25,6 +25,8 @@ namespace RisksApp
 		{
 			base.ViewDidLoad ();
 
+            this.Title = "Support";
+
 			// Perform any additional setup after loading the view, typically from a nib.
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			TableView.Source = new TableSource (this);
