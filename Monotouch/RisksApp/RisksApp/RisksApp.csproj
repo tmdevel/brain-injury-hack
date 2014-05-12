@@ -93,12 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
-<<<<<<< HEAD
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Icon.png" />
     <BundleResource Include="Resources\.DS_Store" />
-=======
->>>>>>> c57dea85e40503ffcb87a091b7da9f3641aa5482
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
