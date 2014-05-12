@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Xamarin Studio to store outlets and
 // actions made in the UI designer. If it is removed, they will be lost.
@@ -9,11 +9,11 @@ using System.CodeDom.Compiler;
 
 namespace RisksApp
 {
-	[Register ("RisksAppViewController")]
-	partial class RisksAppViewController
+	[Register ("DirectoryViewController")]
+	partial class DirectoryViewController
 	{
-		[Action ("ShowDirectory")]
-		partial void ShowDirectory ();
+		[Action ("CloseDirectory")]
+		partial void CloseDirectory ();
 		
 		void ReleaseDesignerOutlets ()
 		{

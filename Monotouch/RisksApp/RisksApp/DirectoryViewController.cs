@@ -5,9 +5,9 @@ using MonoTouch.UIKit;
 
 namespace RisksApp
 {
-	public partial class RisksAppViewController : UIViewController
+	public partial class DirectoryViewController : UIViewController
 	{
-		public RisksAppViewController () : base ("RisksAppViewController", null)
+		public DirectoryViewController () : base ("DirectoryViewController", null)
 		{
 		}
 
@@ -26,12 +26,8 @@ namespace RisksApp
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
-		partial void ShowDirectory () {
-			var directoryView = new DirectoryViewController();
-
-			directoryView.ModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal;
-
-			this.PresentViewController(directoryView, true, null);
+		partial void CloseDirectory () {
+			this.DismissViewController(true, null);
 		}
 	}
 }

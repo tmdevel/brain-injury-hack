@@ -105,9 +105,14 @@
     <Compile Include="RisksAppViewController.designer.cs">
       <DependentUpon>RisksAppViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="DirectoryViewController.cs" />
+    <Compile Include="DirectoryViewController.designer.cs">
+      <DependentUpon>DirectoryViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="RisksAppViewController.xib" />
+    <InterfaceDefinition Include="DirectoryViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
