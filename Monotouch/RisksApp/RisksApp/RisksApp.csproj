@@ -94,6 +94,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Icon.png" />
     <BundleResource Include="Resources\.DS_Store" />
@@ -101,6 +102,10 @@
     <BundleResource Include="Images\BI_Page_2%402x.png" />
     <BundleResource Include="Images\BI_Page_3%402x.png" />
 >>>>>>> FETCH_HEAD
+=======
+    <BundleResource Include="Images\doanddont%402x.png" />
+    <BundleResource Include="Images\symptoms%402x.png" />
+>>>>>>> Stash
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -154,6 +159,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Content Include="Images\SeekMedical.png" />
+    <Content Include="Images\SeekMedical%402x.png" />
   </ItemGroup>
 </Project>
