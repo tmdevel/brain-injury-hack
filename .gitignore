@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 *.suo
 *.user
 _ReSharper.*
 bin
 obj
+=======
+[Bb]in/
+[Oo]bj/
+
+*.suo
+*.user
+_ReSharper.*
+
+bin
+obj
+>>>>>>> c08c6a3b9c6acae2ef799945928c0e515c62c52b
