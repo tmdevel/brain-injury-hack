@@ -142,5 +142,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Content Include="Images\SeekMedical.png" />
+    <Content Include="Images\DDNotes.png" />
   </ItemGroup>
 </Project>
