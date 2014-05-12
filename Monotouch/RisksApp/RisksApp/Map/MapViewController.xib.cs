@@ -101,7 +101,7 @@ namespace RisksApp.UI {
         if (annotation == null)
           return;
         Organisation provider = annotation.Provider;
-        detailCommand.Execute (new CommandContext<Organisation> (provider));
+				//detailCommand.Execute (new CommandContext<Organisation> (provider));
       };
 
       this.service.AddObserver (this);
