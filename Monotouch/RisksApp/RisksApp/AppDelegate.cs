@@ -24,6 +24,15 @@ namespace RisksApp
 		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
+            UINavigationBar.Appearance.TintColor = UIColor.White;
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(227, 6, 19);
+            UINavigationBar.Appearance.BackgroundColor = UIColor.FromRGB(227, 6, 19);
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes(){ TextColor = UIColor.White });
+
+            UIToolbar.Appearance.TintColor = UIColor.White;
+            UIToolbar.Appearance.BarTintColor = UIColor.FromRGB(227, 6, 19);
+            UIToolbar.Appearance.BackgroundColor = UIColor.FromRGB(227, 6, 19);
+
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			
 			viewController = new RisksAppViewController ();
