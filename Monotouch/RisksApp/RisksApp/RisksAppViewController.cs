@@ -46,16 +46,17 @@ namespace RisksApp
 			pagingViewController.DidMoveToParentViewController(this);
 			View.AddSubview(pagingViewController.View);
 
-		    pageDots = new UIPageControl (new RectangleF(10, 0, 320, 20));
+			pageDots = new UIPageControl (new RectangleF(0, 10, 320, 20));
 
 			pageDots.Pages = 5;
 			pageDots.CurrentPage = 0;
 	
 
-			UIToolbar toolBar = new UIToolbar (new RectangleF (0, 568 - 37, 320, 37));
+			UIToolbar toolBar = new UIToolbar (new RectangleF (0, 568 - 40, 320, 40));
 			toolBar.Translucent = false;
-			toolBar.BarTintColor = UIColor.FromRGB (227, 6, 19 );
-			toolBar.BackgroundColor = UIColor.FromRGB (227, 6, 19 );
+			toolBar.TintColor = UIColor.White;
+			toolBar.BarTintColor = UIColor.FromRGB (227, 6, 19);
+			toolBar.BackgroundColor = UIColor.FromRGB (227, 6, 19);
 
 			toolBar.AddSubview (pageDots);
 			toolBar.BringSubviewToFront (pageDots);
