@@ -3,6 +3,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.Collections.Generic;
+using RisksApp.UI;
 
 namespace RisksApp
 {
@@ -73,7 +74,9 @@ namespace RisksApp
 		}
 
 		partial void ShowDirectory () {
-			var directoryView = new DirectoryViewController();
+
+			var directoryView = new MapViewController();
+				//var directoryView = new DirectoryViewController();
 			directoryView.ModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal;
 			PresentViewController(directoryView, true, null);
 		}
@@ -118,7 +121,6 @@ namespace RisksApp
 				return controllers[4];
 			return controllers[index-1];
 		}
-
 
 		private void OnPageChanged(int pageIndex) {
 			var invoker = PageChanged;

@@ -106,6 +106,10 @@
     <BundleResource Include="Images\directory%402x.png" />
     <BundleResource Include="Resources\XXXXDefault-568h%402x.png" />
     <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Images\bannerwhite.png" />
+    <BundleResource Include="Images\bannerwhite%402x.png" />
+    <BundleResource Include="Images\location.png" />
+    <BundleResource Include="Images\location%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -150,6 +154,51 @@
     <Compile Include="SupportViewController.designer.cs">
       <DependentUpon>SupportViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLLite\SQLite.cs" />
+    <Compile Include="Core\Commands\Command.cs" />
+    <Compile Include="Core\Commands\CommandContext.cs" />
+    <Compile Include="Core\Commands\Dispatcher.cs" />
+    <Compile Include="Core\Commands\ICommand.cs" />
+    <Compile Include="Core\Commands\ICommandContext.cs" />
+    <Compile Include="Core\Commands\IDispatcher.cs" />
+    <Compile Include="Core\Commands\UIDispatcher.cs" />
+    <Compile Include="Map\MapViewController.xib.cs">
+      <DependentUpon>..\..\..\..\..\Consilium.TotalMobile\R&amp;D\MindMateNi\MonoTouch\MindMateNI\UI\Map\MapViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="Map\MapViewController.xib.designer.cs">
+      <DependentUpon>..\..\..\..\..\Consilium.TotalMobile\R&amp;D\MindMateNi\MonoTouch\MindMateNI\UI\Map\MapViewController.xib</DependentUpon>
+    </Compile>
+    <Compile Include="Map\OrganisationMapAnnotation.cs" />
+    <Compile Include="Map\OrganisationMapAnnotationAdapter.cs" />
+    <Compile Include="Map\OrganisationMapAnnotationView.cs" />
+    <Compile Include="AppConstants.cs" />
+    <Compile Include="Utils\FormatExtensions.cs" />
+    <Compile Include="Utils\HashUtils.cs" />
+    <Compile Include="Core\Logging\DebugLog.cs" />
+    <Compile Include="Core\Logging\FileLogger.cs" />
+    <Compile Include="Core\Logging\ILog.cs" />
+    <Compile Include="Core\Logging\LogManager.cs" />
+    <Compile Include="Core\Logging\Logger.cs" />
+    <Compile Include="Services\OrganisationService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Data\ContactOption.cs" />
+    <Compile Include="Data\Coordinate.IOS.cs" />
+    <Compile Include="Data\Coordinate.cs" />
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\Organisation.cs" />
+    <Compile Include="Data\OrganisationDetail.cs" />
+    <Compile Include="Core\Device\ILocationManager.cs" />
+    <Compile Include="Core\Device\Locale.cs" />
+    <Compile Include="Core\Device\Location.cs" />
+    <Compile Include="Core\Device\LocationManager.cs" />
+    <Compile Include="Core\Device\LocationStatus.cs" />
+    <Compile Include="Core\Device\Phone.cs" />
+    <Compile Include="Core\Device\PhoneNumber.cs" />
+    <Compile Include="Core\Device\UrlLauncher.cs" />
+    <Compile Include="Core\Ioc\HardCodedServiceLocator.cs" />
+    <Compile Include="Core\Ioc\IServiceLocator.cs" />
+    <Compile Include="Core\Ioc\ServiceLocator.cs" />
+    <Compile Include="Core\Ioc\ServiceLocatorProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="RisksAppViewController.xib" />
@@ -161,6 +210,7 @@
     <InterfaceDefinition Include="SupportViewController.xib" />
     <InterfaceDefinition Include="SupportTableCell.xib" />
     <InterfaceDefinition Include="DocumentViewer.xib" />
+    <InterfaceDefinition Include="Map\MapViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -175,8 +225,15 @@
     <Content Include="Documents\Rehabilitation.pdf" />
     <Content Include="Documents\Family Dynamics and Caring Responsibility.pdf" />
     <Content Include="Documents\Support Services Available.pdf" />
+    <Content Include="Risks.db" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Documents\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Logging\" />
+    <Folder Include="Services\" />
+    <Folder Include="Data\" />
+    <Folder Include="Core\Device\" />
+    <Folder Include="Core\Ioc\" />
   </ItemGroup>
 </Project>

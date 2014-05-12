@@ -1,10 +1,25 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Testing iPhone5" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RisksApp/RisksAppViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RisksApp/Services/ServiceBase.cs">
     <Files>
-      <File FileName="RisksApp/HomeViewController.cs" Line="1" Column="1" />
-      <File FileName="RisksApp/RisksAppViewController.cs" Line="55" Column="61" />
-      <File FileName="../../../Consilium.TotalMobile/Base/Source/Clients/MonoTouch/TotalMobile.MonoTouch/Core/UI/Theme.cs" Line="202" Column="52" />
+      <File FileName="RisksApp/Map/MapViewController.xib.cs" Line="34" Column="70" />
+      <File FileName="RisksApp/Data/Organisation.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Utils/HashUtils.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Utils/FormatExtensions.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/SQLLite/SQLite.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Services/OrganisationService.cs" Line="45" Column="1" />
+      <File FileName="RisksApp/Core/Logging/Logger.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Core/Logging/LogManager.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Core/Logging/ILog.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Core/Device/UrlLauncher.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Data/Database.cs" Line="20" Column="29" />
+      <File FileName="RisksApp/Core/Device/Phone.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Core/Ioc/HardCodedServiceLocator.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/RisksAppViewController.cs" Line="78" Column="48" />
+      <File FileName="RisksApp/Services/ServiceBase.cs" Line="59" Column="1" />
+      <File FileName="../../../Consilium.TotalMobile/R&amp;D/MindMateNi/MonoTouch/MindMateNI/Commands/FilterCommand.cs" Line="1" Column="1" />
+      <File FileName="../../../Consilium.TotalMobile/R&amp;D/MindMateNi/MonoTouch/MindMateNI/Commands/OrganisationDetailCommand.cs" Line="1" Column="1" />
+      <File FileName="RisksApp/Main.cs" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
