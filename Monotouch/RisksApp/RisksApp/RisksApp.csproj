@@ -131,6 +131,10 @@
     <Compile Include="SupportViewController.designer.cs">
       <DependentUpon>SupportViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupportTableCell.cs" />
+    <Compile Include="SupportTableCell.designer.cs">
+      <DependentUpon>SupportTableCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="RisksAppViewController.xib" />
@@ -140,6 +144,7 @@
     <InterfaceDefinition Include="SymptomsViewController.xib" />
     <InterfaceDefinition Include="SeekMedicalViewController.xib" />
     <InterfaceDefinition Include="SupportViewController.xib" />
+    <InterfaceDefinition Include="SupportTableCell.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
