@@ -25,7 +25,7 @@ namespace RisksApp
 		{
 			base.ViewDidLoad ();
 
-            this.Title = "Support";
+			this.Title = "Leaflets";
 
 			// Perform any additional setup after loading the view, typically from a nib.
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
