@@ -8,11 +8,9 @@ namespace RisksApp
 {
 	public partial class RisksAppViewController : UIPageViewController
 	{
-        public RisksAppViewController () : base (UIPageViewControllerTransitionStyle.Scroll, 
-            UIPageViewControllerNavigationOrientation.Horizontal)
+		public RisksAppViewController () : base ("RisksAppViewController", null)
 		{
 		}
-
 
 		public override void DidReceiveMemoryWarning ()
 		{
@@ -29,6 +27,10 @@ namespace RisksApp
 			var pageDataSource = new NavigationPageDataSource ();
 			DataSource = pageDataSource;
 			SetViewControllers (new UIViewController[] { pageDataSource.controllers [0] }, UIPageViewControllerNavigationDirection.Forward, true, (e) => {});
+
+			//UIPageViewControllerTransitionStyle = UIPageViewControllerTransitionStyle.Scroll;
+
+
 		}
 
 		partial void ShowDirectory () {

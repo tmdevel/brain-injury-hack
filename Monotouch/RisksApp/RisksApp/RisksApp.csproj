@@ -93,12 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
-<<<<<<< HEAD
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Icon.png" />
-=======
-    <BundleResource Include="Images\Symptoms%402x.png" />
->>>>>>> f7b76265744f10d3727e511f90e2a7c6a01fc608
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -147,13 +143,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="Images\SeekMedical.png" />
     <Content Include="Images\home.png" />
     <Content Include="Rleud-Condensed-Bold.otf" />
-=======
-    <Content Include="Images\DDNotes%402x.png" />
-    <Content Include="Images\SeekMedical%402x.png" />
->>>>>>> f7b76265744f10d3727e511f90e2a7c6a01fc608
   </ItemGroup>
 </Project>
