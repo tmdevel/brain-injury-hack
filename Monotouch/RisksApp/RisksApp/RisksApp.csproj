@@ -93,9 +93,14 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
+<<<<<<< HEAD
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Icon.png" />
     <BundleResource Include="Resources\.DS_Store" />
+=======
+    <BundleResource Include="Images\BI_Page_2%402x.png" />
+    <BundleResource Include="Images\BI_Page_3%402x.png" />
+>>>>>>> FETCH_HEAD
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -132,6 +137,10 @@
     <Compile Include="SupportViewController.designer.cs">
       <DependentUpon>SupportViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupportTableCell.cs" />
+    <Compile Include="SupportTableCell.designer.cs">
+      <DependentUpon>SupportTableCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="RisksAppViewController.xib" />
@@ -141,6 +150,7 @@
     <InterfaceDefinition Include="SymptomsViewController.xib" />
     <InterfaceDefinition Include="SeekMedicalViewController.xib" />
     <InterfaceDefinition Include="SupportViewController.xib" />
+    <InterfaceDefinition Include="SupportTableCell.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -15,3 +15,7 @@ _ReSharper.*
 bin
 obj
 >>>>>>> c08c6a3b9c6acae2ef799945928c0e515c62c52b
+
+*.userprefs
+
+Monotouch/RisksApp/RisksApp.userprefs
