@@ -97,7 +97,6 @@ namespace RisksApp
 			{
 				DocumentViewer documentViewer = new DocumentViewer (tableItems [indexPath.Row]);
 				viewController.NavigationController.PushViewController (documentViewer, true);
-				tableView.DeselectRow (indexPath, true);
 			}
 		}
 	}
