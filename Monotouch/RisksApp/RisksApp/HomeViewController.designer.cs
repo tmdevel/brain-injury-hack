@@ -13,6 +13,12 @@ namespace RisksApp
 	partial class HomeViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIView GroupView { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIView ImageView { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIView InformLabel { get; set; }
 
 		[Outlet]
@@ -32,6 +38,16 @@ namespace RisksApp
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (ImageView != null) {
+				ImageView.Dispose ();
+				ImageView = null;
+			}
+
+			if (GroupView != null) {
+				GroupView.Dispose ();
+				GroupView = null;
+			}
+
 			if (InformLabel != null) {
 				InformLabel.Dispose ();
 				InformLabel = null;

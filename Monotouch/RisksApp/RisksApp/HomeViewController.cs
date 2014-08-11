@@ -15,16 +15,26 @@ namespace RisksApp
 		{
 			// Releases the view if it doesn't have a superview.
 			base.DidReceiveMemoryWarning ();
-			
 			// Release any cached data, images, etc that aren't in use.
 		}
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+		
+			if(UIScreen.MainScreen.Bounds.Height == 568)
+				((UIImageView)ImageView).Image = UIImage.FromBundle ("Images/home-586h@2x.png");
+			else 
+				((UIImageView)ImageView).Image = UIImage.FromBundle ("Images/home@2x.png");
+				
 			// Perform any additional setup after loading the view, typically from a nib.
             SlideInAnimation();
+		}
+
+		public override void ViewWillLayoutSubviews ()
+		{	ImageView.Frame = new RectangleF (new PointF (0, 0), new SizeF(ImageView.Bounds.Size.Width, UIScreen.MainScreen.Bounds.Height-40));
+			GroupView.Frame = new RectangleF (0, UIScreen.MainScreen.Bounds.Height - (40 + GroupView.Bounds.Height), GroupView.Bounds.Width, GroupView.Bounds.Height);
+			base.ViewWillLayoutSubviews ();
 		}
 
         private void SlideInAnimation() {
