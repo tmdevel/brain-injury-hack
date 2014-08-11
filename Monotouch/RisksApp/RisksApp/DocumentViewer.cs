@@ -39,7 +39,9 @@ namespace RisksApp
 			//String path = NSBundle.MainBundle.PathForResource (doc, "pdf");
 			NSUrl url = NSUrl.FromFilename (path);
 			NSUrlRequest request = new NSUrlRequest (url);
+			WebView.ScalesPageToFit = true;
 			WebView.LoadRequest (request);
+
 		}
 	}
 }
