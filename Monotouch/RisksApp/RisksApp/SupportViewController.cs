@@ -27,8 +27,7 @@ namespace RisksApp
 
 			this.Title = "Support";
 
-            this.
-
+			View.ClipsToBounds = true;
 			// Perform any additional setup after loading the view, typically from a nib.
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			TableView.Source = new TableSource (this);

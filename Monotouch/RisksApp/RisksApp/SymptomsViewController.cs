@@ -22,7 +22,12 @@ namespace RisksApp
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+
+
+			if (UIScreen.MainScreen.Bounds.Height == 568)
+				((UIImageView)ImageView).Image = UIImage.FromBundle ("Images/symptoms-586h");
+			else	
+				((UIImageView)ImageView).Image = UIImage.FromBundle ("Images/symptoms");
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 	}

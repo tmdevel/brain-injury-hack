@@ -22,18 +22,18 @@ namespace RisksApp
 		{
 			base.ViewDidLoad ();
 		
-			if(UIScreen.MainScreen.Bounds.Height == 568)
-				((UIImageView)ImageView).Image = UIImage.FromBundle ("Images/home-586h@2x.png");
-			else 
-				((UIImageView)ImageView).Image = UIImage.FromBundle ("Images/home@2x.png");
-				
+
+			if (UIScreen.MainScreen.Bounds.Height == 568)
+				((UIImageView)ImageView).Image = UIImage.FromBundle ("Images/home-586h");
+			else	
+				((UIImageView)ImageView).Image = UIImage.FromBundle ("Images/home");
 			// Perform any additional setup after loading the view, typically from a nib.
             SlideInAnimation();
 		}
 
 		public override void ViewWillLayoutSubviews ()
 		{	ImageView.Frame = new RectangleF (new PointF (0, 0), new SizeF(ImageView.Bounds.Size.Width, UIScreen.MainScreen.Bounds.Height-40));
-			GroupView.Frame = new RectangleF (0, UIScreen.MainScreen.Bounds.Height - (40 + GroupView.Bounds.Height), GroupView.Bounds.Width, GroupView.Bounds.Height);
+			GroupView.Frame = new RectangleF (0, UIScreen.MainScreen.Bounds.Height - ((UIDevice.CurrentDevice.CheckSystemVersion (7, 0) ? 40 : 60) + GroupView.Bounds.Height), GroupView.Bounds.Width, GroupView.Bounds.Height);
 			base.ViewWillLayoutSubviews ();
 		}
 

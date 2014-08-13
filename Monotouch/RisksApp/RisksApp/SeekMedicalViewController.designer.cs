@@ -13,10 +13,18 @@ namespace RisksApp
 	partial class SeekMedicalViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIImageView ImageView { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIImageView PageImage { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (ImageView != null) {
+				ImageView.Dispose ();
+				ImageView = null;
+			}
+
 			if (PageImage != null) {
 				PageImage.Dispose ();
 				PageImage = null;

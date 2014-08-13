@@ -22,6 +22,9 @@ namespace RisksApp.UI
 		MonoTouch.MapKit.MKMapView mapView { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UINavigationBar navigationBar { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UINavigationItem navItem { get; set; }
 
 		[Outlet]
@@ -35,19 +38,14 @@ namespace RisksApp.UI
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (navItem != null) {
-				navItem.Dispose ();
-				navItem = null;
+			if (navigationBar != null) {
+				navigationBar.Dispose ();
+				navigationBar = null;
 			}
 
-			if (mapView != null) {
-				mapView.Dispose ();
-				mapView = null;
-			}
-
-			if (newSpotButton != null) {
-				newSpotButton.Dispose ();
-				newSpotButton = null;
+			if (activityIndicator != null) {
+				activityIndicator.Dispose ();
+				activityIndicator = null;
 			}
 
 			if (locateButton != null) {
@@ -55,9 +53,19 @@ namespace RisksApp.UI
 				locateButton = null;
 			}
 
-			if (activityIndicator != null) {
-				activityIndicator.Dispose ();
-				activityIndicator = null;
+			if (mapView != null) {
+				mapView.Dispose ();
+				mapView = null;
+			}
+
+			if (navItem != null) {
+				navItem.Dispose ();
+				navItem = null;
+			}
+
+			if (newSpotButton != null) {
+				newSpotButton.Dispose ();
+				newSpotButton = null;
 			}
 		}
 	}

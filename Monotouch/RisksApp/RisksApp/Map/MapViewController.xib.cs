@@ -37,7 +37,7 @@ namespace RisksApp.UI {
       service.Refresh ();
     }
     
-//    private Dictionary<int, OrganisationMapAnnotation> items = new Dictionary<int, OrganisationMapAnnotation> ();
+
     
     public void BeginBusy() {
       RisksApp.Core.Dispatcher.Invoke (() => this.activityIndicator.StartAnimating ()); 
@@ -52,10 +52,10 @@ namespace RisksApp.UI {
       mapView.RemoveAnnotations (mapView.Annotations);
     }
 
-		partial void CloseDirectory (MonoTouch.UIKit.UIBarButtonItem sender)
-		{
-			this.DismissViewController(true, null);
-		}
+	partial void CloseDirectory (MonoTouch.UIKit.UIBarButtonItem sender)
+	{
+		this.DismissViewController(true, null);
+	}
 
     public void ItemsUpdated(IList<Organisation> items) {
       var annotations = OrganisationMapAnnotationAdapter.Translate (items);
@@ -84,13 +84,34 @@ namespace RisksApp.UI {
       get { return ServiceLocator.Current.GetInstance<ILocationManager> (); }
     }
 
+	public override void ViewDidAppear (bool animated)
+	{
+		base.ViewDidAppear (animated);
+		CenterOnUserLocation ();
+	}
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+			if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
+				UIView view = new UIView ();
+				view.Frame = new RectangleF (0, 0, View.Bounds.Width, 20);
+				view.BackgroundColor = UIColor.FromRGB (227, 6, 19);
+				View.AddSubview (view);
+			} else {
+				navigationBar.Frame = new RectangleF (new PointF (0, 0), navigationBar.Bounds.Size);
+			}
+		}
+			
     public override void ViewDidLoad() {
       base.ViewDidLoad ();
-      
+	
+	  this.mapView.ShowsUserLocation = true;
       this.activityIndicator.HidesWhenStopped = true;
-      
-      this.locateButton.Clicked += HandleLocateButtonClicked;
+	 
+	 
 
+      this.locateButton.Clicked += HandleLocateButtonClicked;
+		
       CenterOnUserLocation ();
 
       this.mapView.DidUpdateUserLocation += HandleMapViewDidUpdateUserLocation;
@@ -101,7 +122,6 @@ namespace RisksApp.UI {
         if (annotation == null)
           return;
         Organisation provider = annotation.Provider;
-				//detailCommand.Execute (new CommandContext<Organisation> (provider));
       };
 
       this.service.AddObserver (this);
@@ -134,7 +154,7 @@ namespace RisksApp.UI {
       RemoveAllAnnotations();
       base.ViewDidUnload ();
     }
-
+			
     partial void FilterClicked(MonoTouch.UIKit.UIBarButtonItem sender) {
       filterCommand.Execute ();
     }
