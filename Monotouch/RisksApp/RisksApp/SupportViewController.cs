@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 
 namespace RisksApp
 {
-	public partial class SupportViewController : UITableViewController
+	public partial class SupportViewController : UIViewController
 	{
 		private const String cellIdentifier = "SupportTableCell";
 
@@ -29,8 +29,8 @@ namespace RisksApp
 
 			View.ClipsToBounds = true;
 			// Perform any additional setup after loading the view, typically from a nib.
-			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
-			TableView.Source = new TableSource (this);
+			tableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
+			tableView.Source = new TableSource (this);
 		}
 
 		public class TableSource : UITableViewSource {

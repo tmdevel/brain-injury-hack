@@ -87,7 +87,7 @@ namespace RisksApp
 
 			var directoryView = new MapViewController();
 				//var directoryView = new DirectoryViewController();
-			directoryView.ModalTransitionStyle = UIModalTransitionStyle.PartialCurl;
+			directoryView.ModalTransitionStyle = UIModalTransitionStyle.CoverVertical;
 			PresentViewController(directoryView, true, null);
 		}
 	}

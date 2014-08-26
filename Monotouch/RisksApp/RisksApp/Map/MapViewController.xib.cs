@@ -108,8 +108,6 @@ namespace RisksApp.UI {
 	  this.mapView.ShowsUserLocation = true;
       this.activityIndicator.HidesWhenStopped = true;
 	 
-	 
-
       this.locateButton.Clicked += HandleLocateButtonClicked;
 		
       CenterOnUserLocation ();
