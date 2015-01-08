@@ -7,11 +7,11 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>6.0</string>
+	<string>7.0</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -27,8 +27,23 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon</string>
+		<string>Icon-60@2x</string>
+		<string>Icon@2x</string>
+		<string>Icon-Small-40@2x</string>
+		<string>Icon-Small</string>
+		<string>Icon-Small@2x</string>
 	</array>
 	<key>CFBundleDisplayName</key>
-	<string>R.I.S.K.S</string>
+	<string>R.I.S.K.S </string>
+	<key>UIStatusBarTintParameters</key>
+	<dict>
+		<key>UINavigationBar</key>
+		<dict>
+			<key>Style</key>
+			<string>UIBarStyleDefault</string>
+			<key>Translucent</key>
+			<false/>
+		</dict>
+	</dict>
 </dict>
 </plist>

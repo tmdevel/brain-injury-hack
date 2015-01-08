@@ -78,7 +78,7 @@ namespace RisksApp
 
 			directoryButton = new UIBarButtonItem (UIImage.FromBundle ("Images/directory"), UIBarButtonItemStyle.Plain, (s,e) => ShowDirectory ());
 
-			toolBar.SetItems ( new UIBarButtonItem[] { directoryButton }, true);
+			//toolBar.SetItems ( new UIBarButtonItem[] { directoryButton }, true);
 
 			View.AddSubview (toolBar);
 		}
