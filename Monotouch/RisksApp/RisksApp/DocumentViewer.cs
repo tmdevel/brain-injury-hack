@@ -41,7 +41,6 @@ namespace RisksApp
 			NSUrlRequest request = new NSUrlRequest (url);
 			WebView.ScalesPageToFit = true;
 			WebView.LoadRequest (request);
-
 		}
 	}
 }

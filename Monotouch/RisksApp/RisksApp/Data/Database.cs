@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using RisksApp.Core;
+using MonoTouch.Foundation;
 
 namespace RisksApp {
   public class Database : SQLite.SQLiteConnection {
@@ -30,9 +31,11 @@ namespace RisksApp {
       if (File.Exists (db) == false) {
         Logger.DebugLog  ("Copying DB!");
         File.Copy (rootDbPath, db);
+		NSFileManager.SetSkipBackupAttribute (db, true);
       }
       else {
         Logger.DebugLog ("DB Exists, not copying.");
+		NSFileManager.SetSkipBackupAttribute (db, true);
       }       
     }
   }
